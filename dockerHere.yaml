@@ -4,7 +4,7 @@
   tasks:
   - name: Testing docker
     docker_container:
-      name: mycontainer
+      name: dockerHere
       state: present
       recreate: yes
       force_kill: yes
