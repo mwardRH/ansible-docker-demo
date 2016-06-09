@@ -2,11 +2,8 @@
 
 ## Requires: 
 ansible 2.1.0.0
-
 python >= 2.6
-
 docker-py >= 1.7.0
-
 Docker API >= 1.20
 
 
