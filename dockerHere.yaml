@@ -2,7 +2,13 @@
 - hosts: local
 
   tasks:
-  - name: Testing docker
+  - name: delete existing dockerHere containers
+    docker_container:
+      name: dockerHere
+      state: absent
+      force_kill: yes
+
+  - name: Running dockerHere container
     docker_container:
       name: dockerHere
       state: present
