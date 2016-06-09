@@ -1,0 +1,13 @@
+---
+- hosts: local
+
+  tasks:
+  - name: Testing docker
+    docker_container:
+      name: mycontainer
+      state: present
+      recreate: yes
+      force_kill: yes
+      image: docker.io/centos
+      command: echo "I'm here!"
+
