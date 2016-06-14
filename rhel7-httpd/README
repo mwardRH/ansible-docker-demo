@@ -1,8 +1,5 @@
 Deploy Apache webserver Container using Ansible
 
-Need to know:
-The PASSWORD is: r3dh4t1!
-
 DEMO:
 
 1. Validate no Docker containers are running. 
