@@ -1,0 +1,46 @@
+Deploy Apache webserver Container using Ansible
+
+Need to know:
+The PASSWORD is: r3dh4t1!
+
+DEMO:
+
+1. Validate no Docker containers are running. 
+$ docker ps 
+
+2. Run ansible test. 
+$ ansible local -m ping  
+
+You should see SUCCESS in the output.  
+
+3. Run ansible to orchistrate the container: 
+$ ansible-playbook /root/ansible-docker-demo/dockerHere.yaml
+
+4. Put external IP supplied in the OpenTLC email into your computers browser and see the httpd start page. 
+Example. http://172.0.0.0/
+If you see the 'Red Hat Apache Test Page' you have a successful running Apache container running, orchistrated by Ansible 2.1. 
+
+5. Show running docker container. 
+$ docker ps
+
+
+BACKGROUND
+
+This demo is intended to be very simple and to show how easy it is to use ansible to orchistrate the start of a container. 
+
+1. The docker container was built from a docker file located in /root/dockerBuild/. You can view the Dockerfile for how it was built and the startup script. 
+2. The ansible playboook is located in /root/ansible-docker-demo/. You can view the dockerHere.yaml to see the playbook an the options I used. 
+
+
+STEPS TO REPRODUCE:
+
+Environment setup: 
+1. Add EPEL repo
+2. Install docker, python-docker-py and ansible >= 2.1
+3. Create Dockerfile and accompanying script. - For Docker use 
+4. Build image file - For Docker use
+5. Create Key Pair - For Ansible use
+6. Copy Pubic Key using ssh-copy-id to localhost - For Ansible use 
+7. Add IP and name to Ansible Hosts file. - For Ansible use
+8. Test step 1. Clean up environment. 
+
